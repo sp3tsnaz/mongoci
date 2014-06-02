@@ -13,17 +13,17 @@ Install Instructions
 Edit the <codeigniter_install_path>/config/Mongoci.php file to include username, password, port, auth/no-auth, database_name according to your needs.
 
 Example: (In controller functions) 
-
-    	$this->load->library('builder');
-	$this->load->view('welcome_message');
-	var_dump($this->mongoci->get('system.users'));
+==================================
+$this->load->library('builder');
+$this->load->view('welcome_message');
+var_dump($this->mongoci->get('system.users'));
 		
 
 Examples from the original project (https://github.com/alexbilbie/MongoQB):
 ===========================================================================
 
- Insert a document
-
+Insert a document
+=================
 $this->mongoci->insert('collectionName', [
     'name'  =>  'Alex',
     'age'   =>  22,
@@ -31,7 +31,7 @@ $this->mongoci->insert('collectionName', [
 ]);
 
 Update a single document
-
+========================
 $this->mongoci
     ->where(['name' => 'Alex'])
     ->set([
@@ -42,13 +42,13 @@ $this->mongoci
     ->update('collectionName');
 
 Delete a single document
-
+========================
 $this->mongoci
     ->where(['name' => 'Alex'])
     ->delete('collectionName');
 
 Search for matching documents
-
+=============================
 $results = $this->mongoci
     ->whereGt('age', 21)
     ->whereIn('likes', ['whisky'])
