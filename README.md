@@ -14,24 +14,27 @@ Edit the <codeigniter_install_path>/config/Mongoci.php file to include username,
 
 Example: (In controller functions) 
 ==================================
+```php
 $this->load->library('builder');
 $this->load->view('welcome_message');
 var_dump($this->mongoci->get('system.users'));
-		
+```		
 
 Examples from the original project (https://github.com/alexbilbie/MongoQB):
 ===========================================================================
 
 Insert a document
 =================
+```php
 $this->mongoci->insert('collectionName', [
     'name'  =>  'Alex',
     'age'   =>  22,
     'likes' =>  ['whisky', 'gin']
 ]);
-
+```
 Update a single document
 ========================
+```php
 $this->mongoci
     ->where(['name' => 'Alex'])
     ->set([
@@ -40,17 +43,20 @@ $this->mongoci
     ])
     ->push('likes', ['PHP', 'coffee'])
     ->update('collectionName');
-
+```
 Delete a single document
 ========================
+```php
 $this->mongoci
     ->where(['name' => 'Alex'])
     ->delete('collectionName');
-
+```
 Search for matching documents
 =============================
+```php
 $results = $this->mongoci
     ->whereGt('age', 21)
     ->whereIn('likes', ['whisky'])
     ->where('country', 'UK')
     ->get('collectionName');
+```
