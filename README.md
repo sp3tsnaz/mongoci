@@ -6,9 +6,9 @@ Fork of : https://github.com/alexbilbie/MongoQB integrated with Codeigniter.
 Install Instructions
 ====================
 
-1- Download the repository
-2- Move libraries/Mongoci.php to <codeigniter_install_path>/libraries/Mongoci.php
-3- Move config/Mongoci.php to <codeigniter_install_path>/config/Mongoci.php
+- 1- Download the repository
+- 2- Move libraries/Mongoci.php to <codeigniter_install_path>/libraries/Mongoci.php
+- 3- Move config/Mongoci.php to <codeigniter_install_path>/config/Mongoci.php
 
 Edit the <codeigniter_install_path>/config/Mongoci.php file to include username, password, port, auth/no-auth, database_name according to your needs.
 
