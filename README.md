@@ -15,8 +15,7 @@ Edit the <codeigniter_install_path>/config/Mongoci.php file to include username,
 Example: (In controller functions) 
 ==================================
 ```php
-$this->load->library('builder');
-$this->load->view('welcome_message');
+$this->load->library('mongoci');
 var_dump($this->mongoci->get('system.users'));
 ```		
 
